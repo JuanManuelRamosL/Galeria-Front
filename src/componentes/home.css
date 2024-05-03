@@ -1,0 +1,45 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('https://img.freepik.com/foto-gratis/imagen-papel-tapiz-gris-claro-fondo-trazo-pincel-acrilico_53876-104726.jpg?w=740&t=st=1711747041~exp=1711747641~hmac=9242ead179c568cc3eb12635fc447be479ae37a344f3a1fef7a4db590e044d78');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding: 10px; /* Añadir espacio alrededor del contenedor */
+  margin-top: -26px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img {
+  transition: 0.4s;
+  margin-top: 5vw; /* Utilizar unidades relativas */
+}
+
+.img:hover {
+  border-radius: 18px;
+  opacity: 0.8;
+}
+
+.titulo {
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 5vw; /* Utilizar unidades relativas */
+}
+
+.regresar {
+  text-align: center; /* Centrar el botón */
+  margin-bottom: 5vw; /* Utilizar unidades relativas */
+  padding: 1vw; /* Utilizar unidades relativas */
+}
+

@@ -1,0 +1,47 @@
+/* landing.css */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/fotos-premium/podio-o-pedestal-blanco-minimo-exhibicion-productos-exhibicion-soporte-plataforma-vacia-representacion-3d_691504-388.jpg?w=740'); /* Ruta de tu imagen */
+  background-size: cover; /* Ajustar el tamaño de la imagen */
+  background-position: center; /* Posición de la imagen */
+  background-repeat: no-repeat; /* 
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333; /* Color del texto */
+  }
+  
+  .boton-i {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .boton-i:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+  }
+
+  .boton-s {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #eb0d06; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+  }

@@ -1,0 +1,39 @@
+.card-container {
+    display: flex; /* Mostrar como flexbox */
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en múltiples líneas */
+    justify-content: space-around; /* Espacio distribuido entre las tarjetas */
+}
+
+.card {
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Margen exterior */
+    width: 300px; /* Ancho de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transición suave */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Estilos para el título */
+.titulo {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para la cantidad */
+.cantidad {
+    color: #666; /* Color del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para la imagen */
+.imagen-c {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 6px; /* Bordes redondeados */
+}
