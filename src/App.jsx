@@ -9,6 +9,7 @@ import Category from "./componentes/category";
 import Category_dt from "./componentes/category_dt";
 import Usuario from "./componentes/Usuario";
 import Nosotros from "./componentes/nosotros";
+import Artist from "./componentes/artist";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/categorias_d" element={<Category_dt />} />
         <Route path="/user" element={<Usuario />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/artist" element={<Artist />} />
       </Routes>
     </>
   );

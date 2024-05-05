@@ -1,6 +1,6 @@
 // actions.js
 import axios from 'axios';
-import { SET_IMAGES,SET_IMAGES_S,SET_IMAGES_ID,FAV,REMOVE_FAV_BY_ID, COLECTION, COLECTION_G,USER,FAVBD,NAMEAUX,REMOVE_ALL_FAV} from './reducer';
+import { SET_IMAGES,SET_IMAGES_S,SET_IMAGES_ID,FAV,REMOVE_FAV_BY_ID, COLECTION, COLECTION_G,USER,FAVBD,NAMEAUX,REMOVE_ALL_FAV,ARTIST} from './reducer';
 
 const API_KEY = "oXoJVrAoQ3rCRQsvu3BJaHYxhqKwsPulWoQuHJag5iQ"
 
@@ -85,8 +85,18 @@ export const colecciones_g = (id) => {
       console.error('Error fetching imagenes:', error);
     }
   };
+};
 
-  
+export const artista = (name) => {
+  return async (dispatch) => {
+    try {
+    const response = await axios.get(`https://api.unsplash.com/users/${name}/photos/?client_id=${API_KEY}`)
+      dispatch({ type: ARTIST, payload: response.data });
+      console.log(response)
+    } catch (error) {
+      console.error('Error fetching imagenes:', error);
+    }
+  };
 };
 
 export const User = (name, fav, image) => {

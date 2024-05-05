@@ -30,7 +30,7 @@ function Home() {
     dispatch(selectImageId(id));
     setTimeout(() => {
       navigate("/detail");
-    }, 340);
+    }, 1040);
     //
   };
 

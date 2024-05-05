@@ -102,7 +102,7 @@ function Nav({ setLlave }) {
             <img
               className="img-user"
               onClick={handleUserNav}
-              src={user.picture}
+              src={user?.picture}
               alt=""
             />
           )}

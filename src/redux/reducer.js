@@ -10,7 +10,7 @@ export const USER = "USER"
 export const FAVBD = "FAVBD"
 export const NAMEAUX = "NAMEAUX"
 export const REMOVE_ALL_FAV = 'REMOVE_ALL_FAV';
-
+export const ARTIST = "ARTIST"
 
 const initialState = {
   images: [],
@@ -21,7 +21,8 @@ const initialState = {
   colection_g:[],
   user:[],
   favBD:[],
-  name_aux:[]
+  name_aux:[],
+  artista:[]
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -71,6 +72,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         fav: [] // Elimina todos los favoritos
+      };;
+      case ARTIST:
+      return {
+        ...state,
+        artista: action.payload, // Elimina todos los favoritos
       };
       
     default:
