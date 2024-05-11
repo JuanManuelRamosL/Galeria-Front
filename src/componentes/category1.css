@@ -1,0 +1,27 @@
+.card-containerr {
+    column-count: 3; /* Número de columnas */
+    column-gap: 10px; /* Espacio entre columnas */
+  }
+  
+  .tarjetas {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid-column; /* Evitar que se divida en columnas */
+  }
+  
+  .imagen-c {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .titulo {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .cantidad {
+    font-size: 14px;
+    color: #666;
+  }

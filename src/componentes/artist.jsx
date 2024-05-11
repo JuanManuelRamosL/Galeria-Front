@@ -11,7 +11,7 @@ function Artist() {
   const dispatch = useDispatch();
 
   const navegar = () => {
-    navigate("/home");
+    navigate("/detail");
   };
 
   const name = imageID.user.username;
@@ -26,15 +26,34 @@ function Artist() {
 
   return (
     <>
-      <div onClick={cl}>
-        Artista :{artist[0]?.user.name}{" "}
-        <img src={artist[0]?.user.profile_image.medium} alt="" />
+      {" "}
+      <svg
+        className="volver"
+        onClick={navegar}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M19 12H6M12 5l-7 7 7 7" />
+      </svg>
+      <div class="notification">
+        <div class="notiglow"></div>
+        <div class="notiborderglow"></div>
+        <div class="notititle">Artista :{artist[0]?.user.name} </div>
+        <div class="notibody">
+          <img src={artist[0]?.user.profile_image.medium} alt="" />
+          <p>Biografia: {artist[0]?.user.bio}</p>
+          <p>Pais :{artist[0]?.user.location}</p>
+          <p>Total de Likes: {artist[0]?.user.total_likes}</p>
+          <p>Total de Likes: {artist[0]?.user.total_photos}</p>
+        </div>
       </div>
-      <p>Biografia: {artist[0].user.bio}</p>
-      <p>Pais :{artist[0]?.user.location}</p>
-      <p>Total de Likes: {artist[0]?.user.total_likes}</p>
-      <p>Total de Likes: {artist[0]?.user.total_photos}</p>
-
       <div className="container">
         {artist.map((item) => (
           <div key={item.id} className="artist-card">

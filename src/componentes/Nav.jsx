@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./nav.css";
 import { useDispatch } from "react-redux";
 import { searchImages } from "../redux/action";
@@ -11,6 +11,22 @@ function Nav({ setLlave }) {
   const navigate = useNavigate();
   const { user } = useAuth0();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [userPicture, setUserPicture] = useState(null);
+
+  useEffect(() => {
+    if (user && user.picture) {
+      localStorage.setItem("userPicture", user.picture);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    const storedUserPicture = localStorage.getItem("userPicture");
+    if (storedUserPicture) {
+      // Puedes hacer algo con la imagen del usuario aquí, como mostrarla en un componente
+      console.log("Imagen del usuario recuperada:", storedUserPicture);
+      setUserPicture(storedUserPicture);
+    }
+  }, []);
 
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -98,11 +114,11 @@ function Nav({ setLlave }) {
         </div>
 
         <div className="container-img-user">
-          {user.picture && (
+          {userPicture && (
             <img
               className="img-user"
               onClick={handleUserNav}
-              src={user?.picture}
+              src={userPicture}
               alt=""
             />
           )}

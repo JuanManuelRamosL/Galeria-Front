@@ -14,8 +14,20 @@ function Home() {
   const dispatch = useDispatch();
 
   const { user } = useAuth0();
+
   useEffect(() => {
-    dispatch(getName(user.name));
+    if (user && user.name) {
+      localStorage.setItem("user", JSON.stringify(user));
+    }
+  }, [user]);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      // Utilizar la información de autenticación para autenticar automáticamente al usuario
+      dispatch(getName(user.name));
+    }
   }, []);
 
   useEffect(() => {
